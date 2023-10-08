@@ -22,9 +22,10 @@ jobs:
           python-version: '3.10' 
           cache: 'pip' # caching pip dependencies
       
-      - run: pip install -r requirements.txt
+      - run: |
+          pip install -r requirements.txt
+          pip install pylint
 
-      - name: GitHub Action for pylint
-        uses: cclauss/GitHub-Action-for-pylint@0.7.0
-
-      
+      - name: Analysing the code with pylint
+        run: |
+          pylint $(git ls-files '*.py')
