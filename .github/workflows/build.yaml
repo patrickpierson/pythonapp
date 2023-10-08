@@ -30,5 +30,5 @@ jobs:
         run: |
           pylint $(git ls-files '*.py')
 
-      - name: Python security check using Bandit
-        uses: Joel-hanson/bandit-report-artifacts@V1
+      - name: Python security check 
+        uses: pyupio/safety@2.3.5
