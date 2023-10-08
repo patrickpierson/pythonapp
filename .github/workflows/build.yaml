@@ -23,3 +23,8 @@ jobs:
           cache: 'pip' # caching pip dependencies
       
       - run: pip install -r requirements.txt
+
+      - name: GitHub Action for pylint
+        uses: cclauss/GitHub-Action-for-pylint@0.7.0
+
+      
