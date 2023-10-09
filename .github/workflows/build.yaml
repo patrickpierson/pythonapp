@@ -32,3 +32,10 @@ jobs:
 
       - name: Python security check 
         uses: Joel-hanson/bandit-report-artifacts@V1
+
+      - uses: akhileshns/heroku-deploy@v3.12.14
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "pythondemoapp"
+          heroku_email: "patrick.c.pierson@gmail.com"
+          usedocker: true
