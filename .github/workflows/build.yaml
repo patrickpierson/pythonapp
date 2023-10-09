@@ -44,3 +44,8 @@ jobs:
           heroku_app_name: "pythondemoapp"
           heroku_email: "patrick.c.pierson@gmail.com"
           usedocker: true
+          docker_heroku_process_type: web
+          docker_build_args: |
+            FLASK_ENV
+        env:
+          FLASK_ENV: app
